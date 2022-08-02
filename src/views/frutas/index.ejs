@@ -23,9 +23,9 @@
           <div class="row">
             <div class="col-sm-4 offset-md-1 py-4">
               <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Home</a></li>
+                <li><a href="/" class="text-white">Usuarios</a></li>
                 <li><a href="/frutas" class="text-white">Frutas</a></li>
-                <li><a href="/create" class="text-white">Create</a></li>
+                <li><a href="/frutas/create" class="text-white">Alta de fruta</a></li>
               </ul>
             </div>
           </div>
@@ -53,7 +53,7 @@
 
       <div class="album py-5 bg-light">
         <div class="container">
-          <h4>Lista de usuarios</h4>
+          <h4>Lista de frutas</h4>
           <div class="row">
             <table class="table table-respondive table-hover">
               <thead>
@@ -64,12 +64,12 @@
                 </tr>
               </thead>
               <tbody>
-                <% usuario.forEach(element => { %>
+                <% frutas.forEach(element => { %>
                   <tr>
                     <td><%= element.id %></td>
                     <td><%= element.nombre %></td>
                     <td>
-                      <a class="btn btn-primary" href="/show/<%= element.id %>">Ver detalles</a>
+                      <a class="btn btn-primary" href="/frutas/show/<%= element.id %>">Ver detalles</a>
                     </td>
                   </tr>
                   <% }); %>

@@ -7,6 +7,7 @@ const app = express();
 
 //Requerir router
 const router = require('./routes/index.routes');
+const routerFrutas = require('./routes/frutas.routes')
 
 // Set EJS (view engine)
 app.set("view engine", "ejs");
@@ -20,6 +21,7 @@ app.use(json());
 
 //Rutas
 app.use('/', router);
+app.use('/frutas',routerFrutas);
 
 app.use((req, res, next) => {
   res.status(404).json({
